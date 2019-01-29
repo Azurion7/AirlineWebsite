@@ -2,9 +2,23 @@
 <html>
 The Airline Website
 <head>
+<link rel="stylesheet" type="text/css" href="styling.css">
+<script>
+function expand() {
+  document.getElementById("tab").style.display = "block";
+}
+</script>
+
 </head>
 <body>
-<p>navbar</p>
+<p class="flip" onClick="expand()">Travel Information</p>
+<div id="tab">
+<ul>
+<li>Flight status</li>
+<li>Timetable</li>
+<li>Arport lounges</li>
+</ul>
+</div>
 <br>
 <br>
 <p>carousel</p>
