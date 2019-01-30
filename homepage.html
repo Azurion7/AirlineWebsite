@@ -3,20 +3,33 @@
 The Airline Website
 <head>
 <link rel="stylesheet" type="text/css" href="styling.css">
-<script>
-function expand() {
-  document.getElementById("tab").style.display = "block";
-}
-</script>
-
 </head>
 <body>
-<p class="flip" onClick="expand()">Travel Information</p>
-<div id="tab">
 <ul>
-<li>Flight status</li>
-<li>Timetable</li>
-<li>Arport lounges</li>
+<li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Deals</a>
+    <div class="dropdown-content">
+      <a href="#">Link</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+<li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Flight Information</a>
+    <div class="dropdown-content">
+      <a href="#">Link</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+<li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Reservation</a>
+    <div class="dropdown-content">
+      <a href="#">Link</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
 </ul>
 </div>
 <br>
