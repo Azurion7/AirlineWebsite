@@ -7,6 +7,11 @@ findFlightButton:link, a:visited {
   display: inline-block;
 }
 
+header {
+	background-color: coral;
+	height: 50px;
+}
+
 
 ul {
   list-style-type: none;
@@ -26,6 +31,7 @@ li a, .dropbtn {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  margin: 4px;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -38,7 +44,7 @@ li.dropdown {
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: sticky;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -57,4 +63,30 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+form {
+	background-color: white;
+	width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index:1;
+  padding: 25px;
+  border-radius: 25px;
+  margin: 10px;
+	
+}
+#carausel {
+	background-image: url("http://www.alineport.com/sites/default/files/field/image/aircrafts/engi/wings.jpg");
+	height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+
+.footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 14px;
+
 }
