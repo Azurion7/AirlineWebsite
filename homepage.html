@@ -1,9 +1,16 @@
 
 <!DOCTYPE html>
+<html lang="en">
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="styling.css">
-<header><img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines</header>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<header><img class="img-responsive" src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines</header>
 </head>
 <body>
 <!--Horizontal list for dropdowns-->
@@ -43,6 +50,8 @@
 </div>
 <div id="carausel">
 	<p>carousel</p>
+	
+	<!---Form--->
 	<h3>Book a Flight:</h3>
 	<form action="#" method="POST">
 		From:<br>
@@ -61,8 +70,8 @@
 			<option value="business">Business</option>
 			<option value="first">First Class</option>
 		</select><br><br>
-		<input type="submit" value="Book">
-		<input type="reset" value="Reset">
+		<input type="submit" class="btn btn-info" value="Book">
+		<input type="reset" class="btn bttn-info"value="Reset">
 
 
 	</form>
