@@ -120,3 +120,13 @@ form {
 	padding: 14px;
 
 }
+
+
+#contact-table {
+  border: 1px solid black;
+  text-align: center;
+}
+
+#contact-table th, #contact-table td{
+  border: 1px solid black;
+}
