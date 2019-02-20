@@ -3,61 +3,103 @@
 <html>
 
 <head>
-	<style>
-		.ulinline li{
-			padding:1.5em;
-			display:inline;
-		}
-		
-		.divheader{
-    		background-color:#00ff00;
-    		display:inline;      
-		}
-	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styling.css" />
 </head>
 
 <body>
 
 	<header>
-		<h2 align="center">Header goes here</h2>
+		<img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
 	</header>
 	
-	<div>
-		<!--For updating query-->
-		<section>
-			<form action="#">
-				<input type="Text" placeholder="From">
-				<br>
-				<input type="Text" placeholder="To">
-				<br>
-				<input name="trip" type="radio">One-Way
-				<input name="trip" type="radio">Return
-			</form>
-		</section>
-		<!--Displays list of flights-->
-		<section>
-			<ul class="ulinline">
-				<li>Departure</li>
-				<li>Arrival</li>
-				<li>Duration</li>
-				<li>Class</li>
-				<li>Fare</li>
-			</ul>
+	<!--Horizontal list for dropdowns-->
+	<ul class="drop-ul">
+		<li><a href="#">Log In</a></li>
+		<li>
+			<div class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Deals</a>
+				<div class="dropdown-content-right">
+					<a href="#">Airline specials</a>
+					<a href="#">Destination Deals</a>
+					<a href="#">Member Priviliges </a>
+				</div>
 			</div>
-				
-			<ul class="ulinline">
-				<li>17:30</li>
-				<li>20:45</li>
-				<li>3 Hrs 15 Mins</li>
-				<li>First</li>
-				<li>$1250</li>
-			</ul>
-				
+		</li>
+		
+		<li>
+			<div class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Flight Information</a>
+				<div class="dropdown-content">
+					<a href="#">Flight Status</a>
+					<a href="#">Timetable</a>
+					<a href="#">Baggage Information</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Reservation</a>
+				<div class="dropdown-content">
+					<a href="#">Book a flight</a>
+					<a href="#">Manage reservations</a>
+					<a href="#">Make other reservations</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+		<!--For updating query-->
+	<section>
+		<form action="#" method="POST">
+				From:<br>
+					<input type="text" name="origin" required="true"><br>
+					To:<br>
+					<input type="text" name="destination"><br><br>
+					Date : 
+					<input type="date" name="date"><br><br>
+				<input type="radio" name="trip" value="oneway" checked>One-way
+				<input type="radio" name="trip" value="return">Return<br><br>
+				No of Travellers : 
+				<input type="number" min=1 max=5 name="noofppl"><br><br>
+				Class :  
+				<select name="class">
+					<option value="economy">Economy</option>
+					<option value="business">Business</option>
+					<option value="first">First Class</option>
+				</select><br><br>
+				<input type="submit" value="Book">
+				<input type="reset" value="Reset">
+		
+		
+		</form>
+	</section>
+		<!--Displays list of flights-->
+	<div class="fs-content">
+		<ul class="fs-colnames">
+			<li>Departure</li>
+			<li>Arrival</li>
+			<li>Duration</li>
+			<li>Class</li>
+			<li>Fare</li>
+		</ul>
+			
+		<ul class="fs-colnames">
+			<li>17:30</li>
+			<li>20:45</li>
+			<li>3 Hrs 15 Mins</li>
+			<li>First</li>
+			<li>$1250</li>
+		</ul>
 	</div>
 	
 	
-	<footer>
-		<h2 align="center">Footer goes here</h2>
+	<footer class="footer">
+		<a href="#">Contact us</a>
+		<a href="#">FAQ</a>
+		<br>
+		<a href="#">Privacy Policy</a>
+		<a href="#">Stay Connected</a>
 	</footer>
 </body>
 

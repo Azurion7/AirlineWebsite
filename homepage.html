@@ -2,79 +2,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="styling.css">
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<header><img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines</header>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Below link doesn't allow dropdown to work -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<header>
+    <img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
+</header>
+
 </head>
 <body>
 <!--Horizontal list for dropdowns-->
-<ul>
+<ul class="drop-ul">
 <li><a href="#">Log In</a></li>
 <li>
-	<div class="dropdown">
-		<a href="javascript:void(0)" class="dropbtn">Deals</a>
-		<div class="dropdown-content-right">
-			<a href="#">Airline specials</a>
-			<a href="#">Destination Deals</a>
-			<a href="#">Member Priviliges </a>
-		</div>
-	</div>
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Deals</a>
+        <div class="dropdown-content-right">
+            <a href="#">Airline specials</a>
+            <a href="#">Destination Deals</a>
+            <a href="#">Member Priviliges </a>
+        </div>
+    </div>
 </li>
 
 <li>
-	<div class="dropdown">
-		<a href="javascript:void(0)" class="dropbtn">Flight Information</a>
-		<div class="dropdown-content">
-			<a href="#">Flight Status</a>
-			<a href="#">Timetable</a>
-			<a href="#">Baggage Information</a>
-		</div>
-	</div>
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Flight Information</a>
+        <div class="dropdown-content">
+            <a href="#">Flight Status</a>
+            <a href="#">Timetable</a>
+            <a href="#">Baggage Information</a>
+        </div>
+    </div>
 </li>
 <li>
-	<div class="dropdown">
+    <div class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Reservation</a>
-		<div class="dropdown-content">
-			<a href="#">Book a flight</a>
-			<a href="#">Manage reservations</a>
-			<a href="#">Make other reservations</a>
-		</div>
-	</div>
+        <div class="dropdown-content">
+            <a href="#">Book a flight</a>
+            <a href="#">Manage reservations</a>
+            <a href="#">Make other reservations</a>
+        </div>
+    </div>
 </li>
 </ul>
 </div>
 <div id="carausel">
-	<p>carousel</p>
-	<h3>Book a Flight:</h3>
-	<form action="#" method="POST">
-		From:<br>
-  		<input type="text" name="origin" required="true"><br>
-  		To:<br>
-  		<input type="text" name="destination"><br><br>
-  		Date : 
-  		<input type="date" name="date"><br><br>
-		<input type="radio" name="trip" value="oneway" checked>One-way
-		<input type="radio" name="trip" value="return">Return<br><br>
-		No of Travellers : 
-		<input type="number" min=1 max=5 name="noofppl"><br><br>
-		Class :  
-		<select name="class">
-			<option value="economy">Economy</option>
-			<option value="business">Business</option>
-			<option value="first">First Class</option>
-		</select><br><br>
-		<input type="submit" value="Book">
-		<input type="reset" value="Reset">
+    <p>carousel</p>
+    <h3>Book a Flight:</h3>
+    <form action="#" method="POST">
+        From:<br>
+          <input type="text" name="origin" required="true"><br>
+          To:<br>
+          <input type="text" name="destination"><br><br>
+          Date : 
+          <input type="date" name="date"><br><br>
+        <input type="radio" name="trip" value="oneway" checked>One-way
+        <input type="radio" name="trip" value="return">Return<br><br>
+        No of Travellers : 
+        <input type="number" min=1 max=5 name="noofppl"><br><br>
+        Class :  
+        <select name="class">
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First Class</option>
+        </select><br><br>
+        <input type="submit" value="Book">
+        <input type="reset" value="Reset">
 
+    </form>
 
-	</form>
-	<br>
-	<br>
+    <br>
+    <br>
 </div>
+
 <h3>Popular Destinations : </h3>
 <br>
 <br>
@@ -89,38 +97,38 @@
         </div>
       </a>
     </div>
-	</div> 
-	
+    </div> 
+    
   <div class="col-md-4">
-  	<div class="thumbnail">
-  		<a href="#">
-  			<img src="https://www.680news.com/wp-content/blogs.dir/sites/2/2017/02/london-england.jpg" width="100%" height="parent" alt="london">
-  			<div class="caption">
-  				<p>London</p>
-  			</div>
-  		</a>
-  	</div>
+      <div class="thumbnail">
+          <a href="#">
+              <img src="https://www.680news.com/wp-content/blogs.dir/sites/2/2017/02/london-england.jpg" width="100%" height="parent" alt="london">
+              <div class="caption">
+                  <p>London</p>
+              </div>
+          </a>
+      </div>
   </div>   
 
-	<div class="col-md-4">
-		<div class="thumbnail">
-    	<a href="#">
-				<img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Falexcapri%2Ffiles%2F2018%2F09%2FSingapore-1200x800.jpg" width="100%" height="parent" alt="Singapore">
-				<div class="caption">
-					<p>Singapore</p>
-				</div>
-			</a>
-  	</div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+        <a href="#">
+                <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Falexcapri%2Ffiles%2F2018%2F09%2FSingapore-1200x800.jpg" width="100%" height="parent" alt="Singapore">
+                <div class="caption">
+                    <p>Singapore</p>
+                </div>
+            </a>
+      </div>
 </div>
 </center>
 
-<div class="footer">
-	<a href="#">Contact us</a>
-	<a href="#">FAQ</a>
-	<br>
-	<a href="#">Privacy Policy</a>
-	<a href="#">Stay Connected</a>
-</div>
+    <footer class="footer">
+        <a href="#">Contact us</a>
+        <a href="#">FAQ</a>
+        <br>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Stay Connected</a>
+    </footer>
 </body>
 </html>
 
