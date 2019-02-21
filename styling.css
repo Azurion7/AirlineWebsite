@@ -98,11 +98,11 @@ li a:hover, .dropdown:hover .dropbtn {
 form {
 	background-color: white;
 	width: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index:1;
-  padding: 25px;
-  border-radius: 25px;
-  margin: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	z-index:1;
+  	padding: 25px;
+  	border-radius: 25px;
+  	margin: 10px;
 	
 }
 #carausel {
@@ -132,21 +132,28 @@ form {
 }
 
 .footer {
+	position: fixed;
 	background-color: black;
 	color: white;
 	text-align: center;
 	padding: 14px;
-
+	bottom: 0px;
+	width: 100%;
 }
 
+/* Contact Page */
 
 #contact-table {
-  border: 1px solid black;
-  text-align: center;
+	position:relative;
+	border: 1px solid black;
+	margin-top: 20px;
+  	margin-left: auto;
+  	margin-right: auto;
 }
-
 #contact-table th, #contact-table td{
-  border: 1px solid black;
+	  border: 1px solid black;
+	  text-align: center;
+	  padding:10px;
 }
 
 .fs-content{
