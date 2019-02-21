@@ -84,7 +84,7 @@ li a:hover, .dropdown:hover .dropbtn {
   text-decoration: none;
   display: block;
   text-align: left;
-}*/
+}
 
 .dropdown-content-right a:hover {
   background-color: #f1f1f1;
@@ -97,12 +97,12 @@ li a:hover, .dropdown:hover .dropbtn {
 
 form {
 	background-color: white;
-	width: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index:1;
-  padding: 25px;
-  border-radius: 25px;
-  margin: 10px;
+	width: 350px;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	z-index:1;
+  	padding: 25px;
+  	border-radius: 25px;
+  	margin: 10px;
 	
 }
 #carausel {
