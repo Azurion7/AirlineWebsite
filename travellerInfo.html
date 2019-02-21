@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!---link rel="stylesheet" type="text/css" href="styling.css"--->
+<link rel="stylesheet" type="text/css" href="base.css">
+<div class="navbar">
 <ul>
-<li style="float:left">The Airlines</li>
 <li><a href="#">Log In</a></li>
-<li><a href="#">Home</a></li>
+<li>
+	<div class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Deals</a>
+		<div class="dropdown-content-right">
+			<a href="#">Airline specials</a>
+			<a href="#">Destination Deals</a>
+			<a href="#">Member Priviliges </a>
+		</div>
+	</div>
+</li>
+
+<li>
+	<div class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Flight Information</a>
+		<div class="dropdown-content">
+			<a href="#">Flight Status</a>
+			<a href="#">Timetable</a>
+			<a href="#">Baggage Information</a>
+		</div>
+	</div>
+</li>
+<li>
+	<div class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Reservation</a>
+		<div class="dropdown-content">
+			<a href="#">Book a flight</a>
+			<a href="#">Manage reservations</a>
+			<a href="#">Make other reservations</a>
+		</div>
+	</div>
+</li>
 </ul>
+</div>
 <h1><center>Traveller Information</center></h1>
 </head>
 <body background="https://www.telegraph.co.uk/content/dam/news/2016/06/06/Gatwick_airport2.jpg?imwidth=1400">
@@ -30,9 +61,13 @@
   				 <button type="button" onCLick="#">Proceed to payment</button>
   		</fieldset>
   	</form>
-  <footer>
-  
-  </footer>			 
+  <div class="footer">
+	<a href="#">Contact us</a>
+	<a href="#">FAQ</a>
+	<br>
+	<a href="#">Privacy Policy</a>
+	<a href="#">Stay Connected</a>
+</div>		 
 </body>   
 </html>
 	
