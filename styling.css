@@ -13,7 +13,7 @@ header {
 }
 
 
-ul {
+.drop-ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -148,3 +148,20 @@ form {
 #contact-table th, #contact-table td{
   border: 1px solid black;
 }
+<<<<<<< HEAD
+=======
+
+.fs-content{
+	text-align: center;
+}
+
+.fs-colnames{
+	display: inline-block;
+	padding:10px;
+}
+
+.fs-colnames li{
+	padding:20px;
+	display: inline;
+}
+>>>>>>> 39f0445b142e2dfa02c1dd2362d2dcbb71d81f7b
