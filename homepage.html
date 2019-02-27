@@ -20,7 +20,7 @@
 <body>
 <!--Horizontal list for dropdowns-->
 <ul class="drop-ul">
-<li><a href="#">Log In</a></li>
+<li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Log In</a></li>
 <li>
     <div class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Deals</a>
@@ -54,11 +54,53 @@
 </li>
 </ul>
 </div>
+
+<!--login form-->
+
+
+<div id="loginForm" class="modal"> 
+    
+  <form name="login" onsubmit="return validateForm()" class="modal-content animate" action="#"> 
+    <div class="imgcontainer"> 
+      <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal" style="float: right;" >×</span> 
+      <br>
+      <img src="https://mnsearch.org/wp-content/uploads/2014/10/blank-2017.jpg" alt="Avatar" class="avatar"> 
+    </div> 
+  <br>
+    <div class="container"> 
+      <label><b>Username</b></label> 
+      <input type="text" placeholder="Enter Username" name="uname"> 
+  		<br>
+      <label><b>Password</b></label> 
+      <input type="password" placeholder="Enter Password" name="psw"> 
+          <br>
+      <button type="submit">Login</button> 
+      <br>
+      <input type="checkbox" checked="checked"> Remember me 
+    </div> 
+  
+    <div class="container" style="background-color:#f1f1f1"> 
+      <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="cancelbtn">Cancel</button> 
+      <span class="psw">Forgot <a href="#">password?</a></span> 
+    </div> 
+  </form> 
+</div> 
+  
+<script> 
+  
+var modal = document.getElementById('loginForm'); 
+window.onclick = function(event) { 
+    if (event.target == modal) { 
+        modal.style.display = "none"; 
+    } 
+} 
+</script> 
+
+<!---->
 <div id="carausel">
     <p>carousel</p>
     <h3>Book a Flight:</h3>
-    <form action="#" method="POST">
-        From:<br>
+    <form name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">        From:<br>
           <input type="text" name="origin" required="true"><br>
           To:<br>
           <input type="text" name="destination"><br><br>
@@ -129,6 +171,8 @@
         <a href="#">Privacy Policy</a>
         <a href="#">Stay Connected</a>
     </footer>
+    
+    <script src="formValidation.js"></script>
 </body>
 </html>
 
