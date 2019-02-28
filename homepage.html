@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Below link doesn't allow dropdown to work -->
-
+    <link rel="stylesheet" type="text/css" href="bookForm.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -102,10 +102,16 @@ window.onclick = function(event) {
 <div id="carausel">
     <p>carousel</p>
     <h3>Book a Flight:</h3>
-    <form name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">        From:<br>
-          <input type="text" name="origin" required="true"><br>
+    <form autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+    <div class="autocomplete">
+        From:<br>
+        <input id="myInput" type="text" name="origin" required="true"><br>
+    </div>
+    <div class="autocomplete">
           To:<br>
-          <input type="text" name="destination"><br><br>
+        <input id="myInput" type="text" name="destination" required="true"><br><br>
+    </div>
+    <br>
           Date : 
           <input type="date" name="date"><br><br>
         <input type="radio" name="trip" value="oneway" checked>One-way
@@ -174,6 +180,7 @@ window.onclick = function(event) {
     </footer>
     
     <script src="formValidation.js"></script>
+    <script src="autoComplete.js"></script>
 </body>
 </html>
 
