@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styling.css" />
+	<link rel="stylesheet" type="text/css" href="bookForm.css" />
 	<script src="autoComplete.js"></script>
 </head>
 
@@ -52,11 +53,16 @@
 	</ul>
 		<!--For updating query-->
 	<section>
-		<form action="#" method="POST">
-				From:<br>
-					<input type="text" name="origin" required="true"><br>
-					To:<br>
-					<input type="text" name="destination"><br><br>
+		<form class="fsearch-form" autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+			<div class="autocomplete" style="width:200px;">
+				From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
+			</div>
+			
+			<div class="autocomplete" style="width:200px;"> 
+				To: <input id="dest_input" type="text" name="destination" required="true" placeholder="Destination">
+			</div>
+			<br>
+			<br>
 					Date : 
 					<input type="date" name="date"><br><br>
 				<input type="radio" name="trip" value="oneway" checked>One-way
@@ -71,26 +77,28 @@
 				</select><br><br>
 				<input type="submit" value="Book">
 				<input type="reset" value="Reset">
-		
-		
 		</form>
 	</section>
 		<!--Displays list of flights-->
 	<div class="fs-content">
 		<ul class="fs-colnames">
-			<li>Departure</li>
-			<li>Arrival</li>
-			<li>Duration</li>
-			<li>Class</li>
-			<li>Fare</li>
+		<li>
+			<div>Departure</div>
+			<div>Arrival</div>
+			<div>Duration</div>
+			<div>Class</div>
+			<div>Fare</div>
+		</li>
 		</ul>
-			
-		<ul class="fs-colnames">
-			<li>17:30</li>
-			<li>20:45</li>
-			<li>3 Hrs 15 Mins</li>
-			<li>First</li>
-			<li>$1250</li>
+		<br>
+		<ul class="fs-coldata">
+			<li>
+				<div id="etd">17:30</div>
+				<div id="eta">20:45</div>
+				<div id="flt-time">3 Hrs 15 Mins</div>
+				<div id="flt-class">First</div>
+				<div id="flt-fare">$1250</div>
+			</li>
 		</ul>
 	</div>
 	

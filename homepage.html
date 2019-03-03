@@ -100,20 +100,20 @@ window.onclick = function(event) {
 
 <!---->
 <div id="carausel">
-    <p>carousel</p>
-    <h3>Book a Flight:</h3>
+    <span>carousel</span>
+    
     <form autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
-    <div class="autocomplete">
-        From:<br>
-        <input id="myInput" type="text" name="origin" required="true"><br>
+    <div class="autocomplete" style="width:200px;">
+        From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
     </div>
-    <div class="autocomplete">
-          To:<br>
-        <input id="myInput" type="text" name="destination" required="true"><br><br>
+    
+    <div class="autocomplete" style="width:200px;"> 
+        To: <input id="dest_input" type="text" name="destination" required="true" placeholder="Destination">
     </div>
     <br>
-          Date : 
-          <input type="date" name="date"><br><br>
+    <br>
+        Date : 
+        <input type="date" name="date"><br><br>
         <input type="radio" name="trip" value="oneway" checked>One-way
         <input type="radio" name="trip" value="return">Return<br><br>
         No of Travellers : 

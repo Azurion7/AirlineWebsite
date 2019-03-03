@@ -105,22 +105,21 @@ li a:hover, .dropdown:hover .dropbtn {
   left:auto;
 }
 
-form {
-	background-color: white;
+#carausel form,.fsearch-form {
+	background-color: rgba(255,255,255,0.5);
 	width: 350px;
-  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  	z-index:1;
-  	padding: 25px;
-  	border-radius: 25px;
-  	margin: 10px;
-	
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index:1;
+  padding: 25px;
+  border-radius: 25px;
+  margin: 10px;
 }
 #carausel {
 	background-image: url("http://www.alineport.com/sites/default/files/field/image/aircrafts/engi/wings.jpg");
-	height: 500px; 
+  height: 500px;
   background-position: center; 
   background-repeat: no-repeat; 
-  background-size: cover; 
+  background-size: cover;
 }
 
 .row {
@@ -143,7 +142,7 @@ form {
 
 
 .footer {
-	position: absolute;
+	position: relative;
 	background-color: black;
 	color: white;
 	text-align: center;
@@ -193,15 +192,27 @@ form {
 }
 
 .fs-content{
-	text-align: center;
+  text-align: center;
 }
 
 .fs-colnames{
+  list-style-type: none;
 	display: inline-block;
-	padding:10px;
 }
 
-.fs-colnames li{
-	padding:20px;
+.fs-colnames div{
+  padding-left:45px;
+  padding-right:45px;
+	display: inline;
+}
+
+.fs-coldata{
+  list-style-type: none;
+	display: inline-block;
+}
+
+.fs-coldata div{
+  padding-left:45px;
+  padding-right:45px;
 	display: inline;
 }
