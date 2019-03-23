@@ -196,6 +196,27 @@ window.onclick = function(event) {
     
     <script src="formValidation.js"></script>
     <script src="autoComplete.js"></script>
+    <script>
+	$(document).ready(function(){
+	  $("#form-tinfo").mouseenter(function(){
+	    $("#form-tinfo").fadeTo("slow", 1);
+	    //alert("You entered p1");
+	  });
+	  
+	  $("input").focus(function(){
+	    $(this).css("background-color", "#cccccc");
+	  });
+	  $("input").blur(function(){
+	    $(this).css("background-color", "#ffffff");
+	  });
+	  
+	  $(".close").click(function(){
+	    $(this).fadeIn("background-color", "#ffffff");
+	  });
+
+	});
+	</script>
+
 </body>
 </html>
 
