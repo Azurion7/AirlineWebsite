@@ -8,6 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="styling.css" />
 	<link rel="stylesheet" type="text/css" href="bookForm.css" />
 	<script src="autoComplete.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			$("#form-tinfo").fadeIn(1000);
+		});
+	</script>
 </head>
 
 <body>
@@ -52,7 +60,8 @@
 		</li>
 	</ul>
 		<!--For updating query-->
-	<section>
+
+	<div id="form-tinfo" style="display: none; width: 15%;">
 		<form class="fsearch-form" autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
 			<div class="autocomplete" style="width:200px;">
 				From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
@@ -78,7 +87,8 @@
 				<input type="submit" value="Book">
 				<input type="reset" value="Reset">
 		</form>
-	</section>
+	</div>
+
 		<!--Displays list of flights-->
 	<div class="fs-content">
 		<ul class="fs-colnames">

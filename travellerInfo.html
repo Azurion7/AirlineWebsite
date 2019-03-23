@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			$("#form-tinfo").fadeIn(1000);
+		});
+		</script>
+</head>
+<header>
 <div class="navbar">
 <ul>
 <li><a href="#">Log In</a></li>
@@ -38,35 +48,44 @@
 </li>
 </ul>
 </div>
+
+<!-- Main body -->
 <h1><center>Traveller Information</center></h1>
-</head>
+</header>
+
 <body background="https://www.telegraph.co.uk/content/dam/news/2016/06/06/Gatwick_airport2.jpg?imwidth=1400">
+<center>
+<div id="form-tinfo" style="display: none; width: 15%; background: rgba(121, 251, 255, 0.4);">
 	<form method="POST" action="#" >
 		<fieldset>
 			<legend>Personal Information</legend>
-				 <input type="text" name="fname" placeholder="First name"><br><br>
-  				 <input type="text" name="lname" placeholder="Last name"><br><br>
-  				 Date of Birth :<br>
-  				 <input type="date" name="bdate"><br><br>
-  				 Gender : 
-  				 <input type="radio" value="male" name="male">Male
-  				 <input type="radio" value="female" name="female">Female
-  				 <br><br>
-  				 Email : <br>
-  				 <input type="email" name="email">
-  				 <br><br>
-  				 Contact no :<br>
-  				 <input type="tel" name="contact">
-  				 <br><br>
-  				 <button type="button" onCLick="#">Proceed to payment</button>
+				<input type="text" name="fname" placeholder="First name"><br><br>
+				<input type="text" name="lname" placeholder="Last name"><br><br>
+				Date of Birth :<br>
+				<input type="date" name="bdate"><br><br>
+				Gender : 
+				<input type="radio" value="male" name="male">Male
+				<input type="radio" value="female" name="female">Female
+				<br><br>
+				Email : <br>
+				<input type="email" name="email">
+				<br><br>
+				Contact no :<br>
+				<input type="tel" name="contact">
+				<br><br>
+				<button type="button" onCLick="#">Proceed to payment</button>
   		</fieldset>
-  	</form>
+	  </form>
+	</div>	
+</center>
+
   <div class="footer" style="position:absolute;width:100%;bottom:0px;">
 	<a href="#">Contact us</a>
 	<a href="#">FAQ</a>
 	<br>
 	<a href="#">Privacy Policy</a>
 	<a href="#">Stay Connected</a>
+
 </div>		 
 </body>   
 </html>

@@ -11,7 +11,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <script> 
+        /*$(document).ready(function(){
+          $(".dropdown").hover(function(){
+            $("dropbtn").slideToggle("slow");
+          });
+        });*/
+    </script>
+    <script>
+		$(document).ready(function(){
 
+			$("#form-tinfo").fadeIn(1000);
+		});
+    </script>
 <header>
     <img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
 </header>
@@ -75,15 +88,16 @@
   		<br>
       <label><b>Password</b></label> 
       <input type="password" placeholder="Enter Password" name="psw"> 
-          <br>
+        <br>
       <button type="submit">Login</button> 
-      <br->
+      <br>
       <input type="checkbox" checked="checked"> Remember me 
     </div> 
   
-    <div class="container" style="background-color:#f1f1f1"> 
+    <div class="container"> 
       <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="cancelbtn">Cancel</button> 
-      <span class="psw">Forgot <a href="#">password?</a></span> 
+      <br/>
+      <span class="psw"  style="background-color:#a5a5a5;padding-left:5px;padding-right:5px;"> <a href="#">Forgot password?</a></span> 
     </div> 
   </form> 
 </div> 
@@ -101,39 +115,40 @@ window.onclick = function(event) {
 <!---->
 <div id="carausel">
     <span>carousel</span>
-    
-    <form autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
-    <div class="autocomplete" style="width:200px;">
-        From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
-    </div>
-    
-    <div class="autocomplete" style="width:200px;"> 
-        To: <input id="dest_input" type="text" name="destination" required="true" placeholder="Destination">
-    </div>
-    <br>
-    <br>
-        Date : 
-        <input type="date" name="date"><br><br>
-        <input type="radio" name="trip" value="oneway" checked>One-way
-        <input type="radio" name="trip" value="return">Return<br><br>
-        No of Travellers : 
-        <input type="number" min=1 max=5 name="noofppl"><br><br>
-        Class :  
-        <select name="class">
-            <option value="economy">Economy</option>
-            <option value="business">Business</option>
-            <option value="first">First Class</option>
-        </select><br><br>
-        <input type="submit" value="Book">
-        <input type="reset" value="Reset">
+    <div id="form-tinfo" style="display: none; width: 15%;">
+        <form autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+        <div class="autocomplete" style="width:200px;">
+            From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
+        </div>
+        
+        <div class="autocomplete" style="width:200px;"> 
+            To: <input id="dest_input" type="text" name="destination" required="true" placeholder="Destination">
+        </div>
+        <br>
+        <br>
+            Date : 
+            <input type="date" name="date"><br><br>
+            <input type="radio" name="trip" value="oneway" checked>One-way
+            <input type="radio" name="trip" value="return">Return<br><br>
+            No of Travellers : 
+            <input type="number" min=1 max=5 name="noofppl"><br><br>
+            Class :  
+            <select name="class">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select><br><br>
+            <input type="submit" value="Book">
+            <input type="reset" value="Reset">
 
-    </form>
-
+        </form>
+    </div>
     <br>
     <br>
 </div>
+
 <div>
-<h3>Popular Destinations : </h3>
+    <h3>Popular Destinations : </h3>
 <div>
     <center>
     <div class="row">
