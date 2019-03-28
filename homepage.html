@@ -22,7 +22,7 @@
     <script>
 		$(document).ready(function(){
 
-			$("#form-tinfo").fadeIn(1000);
+			$("#div-finfo").fadeIn(1000);
 		});
     </script>
 <header>
@@ -115,8 +115,9 @@ window.onclick = function(event) {
 <!---->
 <div id="carausel">
     <span>carousel</span>
-    <div id="form-tinfo" style="display: none; width: 15%;">
-        <form autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+   
+    <div id="div-finfo" style="display: none; width: 15%;">
+        <form autocomplete="off" id="form-finfo" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
         <div class="autocomplete" style="width:200px;">
             From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
         </div>
@@ -198,8 +199,8 @@ window.onclick = function(event) {
     <script src="autoComplete.js"></script>
     <script>
 	$(document).ready(function(){
-	  $("#form-tinfo").mouseenter(function(){
-	    $("#form-tinfo").fadeTo("slow", 1);
+	  $("#div-finfo").mouseenter(function(){
+	    $("#form-finfo").fadeTo("slow", 1);
 	    //alert("You entered p1");
 	  });
 	  
@@ -207,7 +208,7 @@ window.onclick = function(event) {
 	    $(this).css("background-color", "#cccccc");
 	  });
 	  $("input").blur(function(){
-	    $(this).css("background-color", "#ffffff");
+	    $(this).css("background-color", "#f1f1f1");
 	  });
 	  
 	  $(".close").click(function(){
