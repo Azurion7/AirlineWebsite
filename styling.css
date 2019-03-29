@@ -105,7 +105,9 @@ li a:hover, .dropdown:hover .dropbtn {
   left:auto;
 }
 
-#carausel form,.fsearch-form {
+form,.fsearch-form {
+	position: absolute;
+	top : 15%;
 	background-color: rgba(255,255,255,0.5);
 	width: 350px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -114,12 +116,15 @@ li a:hover, .dropdown:hover .dropbtn {
   border-radius: 25px;
   margin: 10px;
 }
-#carausel {
-	background-image: url("http://www.alineport.com/sites/default/files/field/image/aircrafts/engi/wings.jpg");
-  height: 500px;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
+
+.carousel-inner .item img
+{
+
+height: auto;
+border-top : 0px;
+border-bottom: 0px;
+border-left: 0px;
+border-right: 0px;
 }
 
 .row {
@@ -146,7 +151,8 @@ li a:hover, .dropdown:hover .dropbtn {
 	background-color: black;
 	color: white;
 	text-align: center;
-	padding: 14px;
+	padding: 0px;
+	margin: 0px;
 	bottom:0;
 	width:100%;
 }

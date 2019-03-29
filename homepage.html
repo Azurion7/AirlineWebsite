@@ -32,43 +32,47 @@
 </head>
 <body>
 <!--Horizontal list for dropdowns-->
-<ul class="drop-ul">
-<li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Log In</a></li>
-<li>
-    <div class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Deals</a>
-        <div class="dropdown-content-right">
-            <a href="#">Airline specials</a>
-            <a href="#">Destination Deals</a>
-            <a href="#">Member Priviliges </a>
-        </div>
-    </li>
 
-    <li>
-        <div class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Flight Information</a>
-            <div class="dropdown-content">
-                <a href="#">Flight Status</a>
-                <a href="#">Timetable</a>
-                <a href="#">Baggage Information</a>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Reservation</a>
+
+<nav class="navbar navbar-inverse" style="margin:0px;">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#">HOME</a></li>
+      <li>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">RESERVATION</a>
             <div class="dropdown-content">
                 <a href="#">Book a flight</a>
                 <a href="#">Manage reservations</a>
                 <a href="#">Make other reservations</a>
             </div>
-        </div>
-    </li>
+		</div>
+      </li>
+      <li>
+      <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">FLIGHT INFORMATION</a>
+            <div class="dropdown-content">
+                <a href="#">Flight Status</a>
+                <a href="#">Timetable</a>
+                <a href="#">Baggage Information</a>
+            </div>
+		</div>
+	</li>
+      <li>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">DEALS</a>
+        <div class="dropdown-content-right">
+            <a href="#">Airline specials</a>
+            <a href="#">Destination Deals</a>
+            <a href="#">Member Priviliges </a>
+		</div>
+		</li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
-    </div>
-</li>
-</ul>
+ 
 </div>
+</nav>
 
 <!--login form-->
 
@@ -113,9 +117,50 @@ window.onclick = function(event) {
 </script> 
 
 <!---->
-<div id="carausel">
-    <span>carousel</span>
-   
+<div class="parent">
+<div class="col-md-12">
+    <div id="myCarousel" class="carousel slide row" data-ride="carousel" data-interval="2500">
+	<ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active text-center">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg" alt="testimonial" class="center-block" style="height: 700px">
+	</div>
+    <div class="item text-center">
+		<img src="https://in.lastminute.com/blog/wp-content/uploads/2018/10/iTraveller-new-campaign-fb-posts-278a-tourist-places-in-Madlives-595x335.png" alt="testimonial" class="center-block" style="height: 700px">	
+	</div>
+	<div class="item text-center">
+		<img src="./images/RFR.png" alt="testimonial" class="center-block" style="height: 700px">
+	</div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!---------->   
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#book-tab">Book</a></li>
+  <li><a data-toggle="tab" href="#menu1">Check-In</a></li>
+  <li><a data-toggle="tab" href="#menu2">Flight Status</a></li>
+</ul>
+<div class="tab-content">
+  <div id="book-tab" class="tab-pane fade in active">
+    <h3>HOME</h3>
+    <p>Some content.</p>
+  </div>
+
     <div id="div-finfo" style="display: none; width: 15%;">
         <form autocomplete="off" id="form-finfo" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
         <div class="autocomplete" style="width:200px;">
@@ -147,8 +192,8 @@ window.onclick = function(event) {
     <br>
     <br>
 </div>
-
-<div>
+</div>
+<div class="container" style="width:100%">
     <h3>Popular Destinations : </h3>
 <div>
     <center>
