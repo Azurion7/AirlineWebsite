@@ -80,10 +80,10 @@
 <div id="loginForm" class="modal"> 
     
   <form name="login" onsubmit="return validateForm()" class="modal-content animate" action="#"> 
-    <div class="imgcontainer"> 
-      <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal" style="float: right;" >×</span> 
+    <div class="imgcontainer" > 
+      <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal" style="float: right;padding:20px;" >×</span> 
       <br>
-      <img src="https://mnsearch.org/wp-content/uploads/2014/10/blank-2017.jpg" alt="Avatar" class="avatar"> 
+      <img src="https://mnsearch.org/wp-content/uploads/2014/10/blank-2017.jpg" alt="Avatar" class="avatar" style="padding:20px;"> 
     </div> 
   <br>
     <div class="container"> 
@@ -105,7 +105,6 @@
     </div> 
   </form> 
 </div> 
-  
 <script> 
   
 var modal = document.getElementById('loginForm'); 
@@ -129,13 +128,13 @@ window.onclick = function(event) {
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active text-center">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg" alt="testimonial" class="center-block" style="height: 700px">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg" alt="testimonial" class="center-block" width="100%" style="height: 700px">
 	</div>
     <div class="item text-center">
-		<img src="https://in.lastminute.com/blog/wp-content/uploads/2018/10/iTraveller-new-campaign-fb-posts-278a-tourist-places-in-Madlives-595x335.png" alt="testimonial" class="center-block" style="height: 700px">	
+		<img src="https://in.lastminute.com/blog/wp-content/uploads/2018/10/iTraveller-new-campaign-fb-posts-278a-tourist-places-in-Madlives-595x335.png" alt="testimonial" class="center-block" width="100%" style="height: 700px">	
 	</div>
 	<div class="item text-center">
-		<img src="./images/RFR.png" alt="testimonial" class="center-block" style="height: 700px">
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/01/31/09/new-york-main-image.jpg" alt="testimonial" class="center-block" width="100%" style="height: 700px">
 	</div>
   </div>
   <!-- Left and right controls -->
@@ -149,19 +148,15 @@ window.onclick = function(event) {
   </a>
 </div>
 <!---------->   
-
-<ul class="nav nav-tabs">
+<div class="tabs" style="position:absolute;top:15%;">
+<ul class="nav nav-tabs"> 
   <li class="active"><a data-toggle="tab" href="#book-tab">Book</a></li>
-  <li><a data-toggle="tab" href="#menu1">Check-In</a></li>
-  <li><a data-toggle="tab" href="#menu2">Flight Status</a></li>
+  <li><a data-toggle="tab" href="#check-in">Check-In</a></li>
+  <li><a data-toggle="tab" href="#fstatus">Flight Status</a></li>
 </ul>
 <div class="tab-content">
   <div id="book-tab" class="tab-pane fade in active">
-    <h3>HOME</h3>
-    <p>Some content.</p>
-  </div>
-
-    <div id="div-finfo" style="display: none; width: 15%;">
+    <div id="div-finfo" style="display: none;">
         <form autocomplete="off" id="form-finfo" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
         <div class="autocomplete" style="width:200px;">
             From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
@@ -189,6 +184,40 @@ window.onclick = function(event) {
 
         </form>
     </div>
+  </div>
+  <div id="check-in" class="tab-pane fade">
+    <h3>Check In</h3>
+    	<form action="#">
+  		<div class="form-group">
+    		<label for="cno">Confirmation No:</label>
+    		<input type="Text" class="form-control" id=cno">
+  		</div>
+  		<div class="form-group">
+    		<label for="ln">Last Name:</label>
+    		<input type="text" class="form-control" id="ln">
+  		</div>
+   		<button type="submit" class="btn btn-default">Check</button>
+		</form>
+    </div>
+	<div id="fstatus" class="tab-pane fade">
+    <h3>Flight Status</h3>
+    	<form action="#">
+  		<div class="form-group">
+    		<label for="source">From:</label>
+    		<input type="Text" class="form-control" id=source">
+  		</div>
+  		<div class="form-group">
+    		<label for="dest">Destination:</label>
+    		<input type="text" class="form-control" id="dest">
+  		</div>
+  		<div class="form-group">
+  			<label for="date">Date:</label>
+  			<input type="date" class="form-control" id="date">
+  		</div>
+   		<button type="submit" class="btn btn-default">Check</button>
+		</form>
+    </div>
+  </div>
     <br>
     <br>
 </div>
@@ -198,7 +227,7 @@ window.onclick = function(event) {
 <div>
     <center>
     <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="">
         <div class="thumbnail">
         <a href="#">
             <img src="https://en.parisinfo.com/var/otcp/sites/images/media/1.-photos/02.-sites-culturels-630-x-405/tour-eiffel-trocadero-630x405-c-thinkstock/37221-1-fre-FR/Tour-Eiffel-Trocadero-630x405-C-Thinkstock.jpg" width="100%" height="parent" alt="Lights">

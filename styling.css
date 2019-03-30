@@ -104,17 +104,17 @@ li a:hover, .dropdown:hover .dropbtn {
   right: 0;
   left:auto;
 }
-
-form,.fsearch-form {
-	position: absolute;
+.tabs {
+	position: relative;
 	top : 15%;
 	background-color: rgba(255,255,255,0.5);
 	width: 350px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index:1;
   padding: 25px;
-  border-radius: 25px;
+  border-radius: 0px;
   margin: 10px;
+	
 }
 
 .carousel-inner .item img
@@ -169,7 +169,7 @@ border-right: 0px;
     z-index: 1;  
     left: 0; 
     top: 0; 
-    width: 100%; 
+    width: 50%; 
     height: 100%; 
     overflow: auto;  
 } 

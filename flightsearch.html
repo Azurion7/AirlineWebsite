@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="bookForm.css" />
 	<script src="autoComplete.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 	<script>
 		$(document).ready(function(){
@@ -59,35 +61,45 @@
 			</div>
 		</li>
 	</ul>
+	<br>
 		<!--For updating query-->
 
-	<div id="form-tinfo" style="display: none; width: 15%;">
-		<form class="fsearch-form" autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+		<form class="form-inline" autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+		<div class="form-group">
 			<div class="autocomplete" style="width:200px;">
-				From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
+				<label class="control-label" for="source">From:</label>
+				 <input id="src_input" type="text" name="origin" placeholder="Source" class="form-control">
+			</div>
 			</div>
 			
+			<div class="form-group">
 			<div class="autocomplete" style="width:200px;"> 
-				To: <input id="dest_input" type="text" name="destination" required="true" placeholder="Destination">
+			<label class="control-label" for="dest">To:</label>
+				<input id="dest_input" type="text" name="destination" placeholder="Destination" class="form-control">
 			</div>
-			<br>
-			<br>
-					Date : 
-					<input type="date" name="date"><br><br>
-				<input type="radio" name="trip" value="oneway" checked>One-way
-				<input type="radio" name="trip" value="return">Return<br><br>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label" for="date">Date : </label>
+
+					<input type="date" name="date" class="form-control">
+			</div>
+			<div class="form-group">
 				No of Travellers : 
-				<input type="number" min=1 max=5 name="noofppl"><br><br>
+				<input type="number" min=1 max=5 name="noofppl" class="form-control">
+				</div>
+				<div class="form-group">
 				Class :  
 				<select name="class">
 					<option value="economy">Economy</option>
 					<option value="business">Business</option>
 					<option value="first">First Class</option>
-				</select><br><br>
+				</select>
+				</div>
+				<br><br>
 				<input type="submit" value="Book">
 				<input type="reset" value="Reset">
 		</form>
-	</div>
 
 		<!--Displays list of flights-->
 	<div class="fs-content">
