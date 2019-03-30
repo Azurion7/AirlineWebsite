@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styling.css" />
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+	<script src="bootstrap/bootstrap.js"></script>
 
 	<header>
 		<img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
@@ -12,7 +14,7 @@
 </head>
 
 <body>
-<div id="ci-container">
+<div>
 	<ul class="drop-ul">
 		<li><a href="#">Log In</a></li>
 		<li>
@@ -48,53 +50,66 @@
 		</li>
 	</ul>
 	
-	<div class="contact-content">
-	<table id="contact-table">
+<center>
+	<div style=" width:50%; text-align: center">
+	<table class="table">
+	<thead class="thead-dark">
 		<tr>
-			<th>City</th>
-			<th>Address</th>
-			<th>Contact no.</th>
+			<th scope="col">S.No</th>
+			<th scope="col">City</th>
+			<th scope="col">Address</th>
+			<th scope="col">Contact no.</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
+			<th scope="row">1</th>
 			<td>Delhi</td>
 			<td>Address 1</td>
 			<td>26586548</td>
 		</tr>
 		<tr>
+			<th scope="row">2</th>
 			<td>Kolkata</td>
 			<td>Address 2</td>
 			<td>48625151</td>
 		</tr>
 		<tr>
+			<th scope="row">3</th>
 			<td>Singapore</td>
 			<td>Address 3</td>
 			<td>88996311</td>
 		</tr>
 		<tr>
+			<th scope="row">4</th>
 			<td>Cape Town</td>
 			<td>Address 4</td>
 			<td>26586548</td>
 		</tr>
 		<tr>
+			<th scope="row">5</th>
 			<td>Moscow</td>
 			<td>Address 6</td>
 			<td>26586548</td>
 		</tr>
 		<tr>
+			<th scope="row">6</th>
 			<td>New York</td>
 			<td>Address 7</td>
 			<td>26586548</td>
 		</tr>
+	</tbody>
 	</table>
-	</div>
+</div>
+</center>
 	
 <footer class="footer">
-		<a href="#">Contact us</a>
-		<a href="#">FAQ</a>
-		<br>
-		<a href="#">Privacy Policy</a>
-		<a href="#">Stay Connected</a>
-	</footer>
+	<a href="#">Contact us</a>
+	<a href="#">FAQ</a>
+	<br>
+	<a href="#">Privacy Policy</a>
+	<a href="#">Stay Connected</a>
+</footer>
 
 </div>
 </body>
