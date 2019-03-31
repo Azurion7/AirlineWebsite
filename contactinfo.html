@@ -1,60 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styling.css" />
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
-	<script src="bootstrap/bootstrap.js"></script>
+    <!-- Below link doesn't allow dropdown to work -->
+    <link rel="stylesheet" type="text/css" href="bookForm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <script> 
+        /*$(document).ready(function(){
+          $(".dropdown").hover(function(){
+            $("dropbtn").slideToggle("slow");
+          });
+        });*/
+    </script>
+    <script>
+		$(document).ready(function(){
 
-	<header>
-		<img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
-	</header>
+			$("#div-finfo").fadeIn(1000);
+		});
+    </script>
+<header>
+    <img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
+</header>
+
 </head>
-
 <body>
-<div>
-	<ul class="drop-ul">
-		<li><a href="#">Log In</a></li>
-		<li>
-		<div class="dropdown">
-			<a href="javascript:void(0)" class="dropbtn">Deals</a>
-			<div class="dropdown-content-right">
-				<a href="#">Airline specials</a>
-				<a href="#">Destination Deals</a>
-				<a href="#">Member Priviliges </a>
-			</div>
+<!--Horizontal list for dropdowns-->
+
+
+<nav class="navbar navbar-inverse" style="margin:0px;">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#">HOME</a></li>
+      <li>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">RESERVATION</a>
+            <div class="dropdown-content">
+                <a href="#">Book a flight</a>
+                <a href="#">Manage reservations</a>
+                <a href="#">Make other reservations</a>
+            </div>
+		</div>
+      </li>
+      <li>
+      <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">FLIGHT INFORMATION</a>
+            <div class="dropdown-content">
+                <a href="#">Flight Status</a>
+                <a href="#">Timetable</a>
+                <a href="#">Baggage Information</a>
+            </div>
+		</div>
+	</li>
+      <li>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">DEALS</a>
+        <div class="dropdown-content-right">
+            <a href="#">Airline specials</a>
+            <a href="#">Destination Deals</a>
+            <a href="#">Member Priviliges </a>
 		</div>
 		</li>
-			
-		<li>
-		<div class="dropdown">
-			<a href="javascript:void(0)" class="dropbtn">Flight Information</a>
-			<div class="dropdown-content">
-				<a href="#">Flight Status</a>
-				<a href="#">Timetable</a>
-				<a href="#">Baggage Information</a>
-			</div>
-		</div>
-		</li>
-		<li>
-			<div class="dropdown">
-			<a href="javascript:void(0)" class="dropbtn">Reservation</a>
-				<div class="dropdown-content">
-					<a href="#">Book a flight</a>
-					<a href="#">Manage reservations</a>
-					<a href="#">Make other reservations</a>
-				</div>
-			</div>
-		</li>
-	</ul>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+ 
+</div>
+</nav>
+	<br>
+	<br>
+	<br>
 	
+	<div class="container">
 <center>
 	<div style=" width:50%; text-align: center">
-	<table class="table">
+	<table class="table table-hover">
 	<thead class="thead-dark">
-		<tr>
+		<tr style="background-color:  #444342 ;color:white;">
 			<th scope="col">S.No</th>
 			<th scope="col">City</th>
 			<th scope="col">Address</th>
@@ -102,7 +129,10 @@
 	</table>
 </div>
 </center>
-	
+</div>
+	<br>
+	<br>
+	<br>
 <footer class="footer">
 	<a href="#">Contact us</a>
 	<a href="#">FAQ</a>

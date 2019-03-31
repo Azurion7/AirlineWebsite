@@ -3,68 +3,83 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styling.css" />
-	<link rel="stylesheet" type="text/css" href="bookForm.css" />
-	<script src="autoComplete.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<script>
+    <!-- Below link doesn't allow dropdown to work -->
+    <link rel="stylesheet" type="text/css" href="bookForm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <script> 
+        /*$(document).ready(function(){
+          $(".dropdown").hover(function(){
+            $("dropbtn").slideToggle("slow");
+          });
+        });*/
+    </script>
+    <script>
 		$(document).ready(function(){
 
-			$("#form-tinfo").fadeIn(1000);
+			$("#div-finfo").fadeIn(1000);
 		});
-	</script>
+    </script>
+<header>
+    <img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
+</header>
+
 </head>
-
 <body>
+<!--Horizontal list for dropdowns-->
 
-	<header>
-		<img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
-	</header>
-	
-	<!--Horizontal list for dropdowns-->
-	<ul class="drop-ul">
-		<li><a href="#">Log In</a></li>
-		<li>
-			<div class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Deals</a>
-				<div class="dropdown-content-right">
-					<a href="#">Airline specials</a>
-					<a href="#">Destination Deals</a>
-					<a href="#">Member Priviliges </a>
-				</div>
-			</div>
+
+<nav class="navbar navbar-inverse" style="margin:0px;">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#">HOME</a></li>
+      <li>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">RESERVATION</a>
+            <div class="dropdown-content">
+                <a href="#">Book a flight</a>
+                <a href="#">Manage reservations</a>
+                <a href="#">Make other reservations</a>
+            </div>
+		</div>
+      </li>
+      <li>
+      <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">FLIGHT INFORMATION</a>
+            <div class="dropdown-content">
+                <a href="#">Flight Status</a>
+                <a href="#">Timetable</a>
+                <a href="#">Baggage Information</a>
+            </div>
+		</div>
+	</li>
+      <li>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">DEALS</a>
+        <div class="dropdown-content-right">
+            <a href="#">Airline specials</a>
+            <a href="#">Destination Deals</a>
+            <a href="#">Member Priviliges </a>
+		</div>
 		</li>
-		
-		<li>
-			<div class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">Flight Information</a>
-				<div class="dropdown-content">
-					<a href="#">Flight Status</a>
-					<a href="#">Timetable</a>
-					<a href="#">Baggage Information</a>
-				</div>
-			</div>
-		</li>
-		<li>
-			<div class="dropdown">
-			<a href="javascript:void(0)" class="dropbtn">Reservation</a>
-				<div class="dropdown-content">
-					<a href="#">Book a flight</a>
-					<a href="#">Manage reservations</a>
-					<a href="#">Make other reservations</a>
-				</div>
-			</div>
-		</li>
-	</ul>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+ 
+</div>
+</nav>
+
 	<br>
 		<!--For updating query-->
-
-		<form class="form-inline" autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+<div class="container">
+		<form class="form-inline" autocomplete="off" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()"
+		style="padding:20px;border-style:solid;border-width:3px;border-color: #706e6d ">
 		<div class="form-group">
 			<div class="autocomplete" style="width:200px;">
 				<label class="control-label" for="source">From:</label>
@@ -97,9 +112,13 @@
 				</select>
 				</div>
 				<br><br>
-				<input type="submit" value="Book">
-				<input type="reset" value="Reset">
+				<center>
+				<button type="button" class="btn btn-primary">Check</button>
+				<button type="button" class="btn btn-danger">Reset</button>
+				</center>
 		</form>
+		<br>
+		<br>
 
 		<!--Displays list of flights-->
 	<div class="fs-content">
@@ -123,7 +142,8 @@
 			</li>
 		</ul>
 	</div>
-	
+	<br>
+	</div>
 	
 	<footer class="footer">
 		<a href="#">Contact us</a>

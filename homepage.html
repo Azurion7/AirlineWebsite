@@ -76,17 +76,18 @@
 
 <!--login form-->
 
-
+<div class="container">
 <div id="loginForm" class="modal"> 
     
   <form name="login" onsubmit="return validateForm()" class="modal-content animate" action="#"> 
-    <div class="imgcontainer" > 
+ 
       <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal" style="float: right;padding:20px;" >×</span> 
+          <div class="imgcontainer col-md-6" >
       <br>
       <img src="https://mnsearch.org/wp-content/uploads/2014/10/blank-2017.jpg" alt="Avatar" class="avatar" style="padding:20px;"> 
     </div> 
   <br>
-    <div class="container"> 
+    <div class="col-md-6"> 
       <label><b>Username</b></label> 
       <input type="text" placeholder="Enter Username" name="uname"> 
   		<br>
@@ -96,12 +97,11 @@
       <button type="submit">Login</button> 
       <br>
       <input type="checkbox" checked="checked"> Remember me 
+      <span class="psw"  style="background-color:#a5a5a5;padding-left:5px;padding-right:5px;"> <a href="#">Forgot password?</a></span> 
     </div> 
   
-    <div class="container"> 
-      <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="cancelbtn">Cancel</button> 
-      <br/>
-      <span class="psw"  style="background-color:#a5a5a5;padding-left:5px;padding-right:5px;"> <a href="#">Forgot password?</a></span> 
+    <div class="container">
+      
     </div> 
   </form> 
 </div> 
@@ -114,7 +114,7 @@ window.onclick = function(event) {
     } 
 } 
 </script> 
-
+</div>
 <!---->
 <div class="parent">
 <div class="col-md-12">
@@ -214,7 +214,7 @@ window.onclick = function(event) {
   			<label for="date">Date:</label>
   			<input type="date" class="form-control" id="date">
   		</div>
-   		<button type="submit" class="btn btn-default">Check</button>
+   		<button type="button" class="btn btn-primary">Check</button>
 		</form>
     </div>
   </div>
@@ -260,6 +260,7 @@ window.onclick = function(event) {
         </div>
     </div>
     </center>
+</div>
 </div>
     <footer class="footer">
         <a href="#">Contact us</a>
