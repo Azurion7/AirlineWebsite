@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="horzForm.css">
+    <link rel="stylesheet" type="text/css" href="bookForm.css">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <div class="form-container">
+    <div class="inner-container" style="padding:15px;">
+    <form autocomplete="off" id="form-finfo" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+        
+        <div class="autocomplete" style="width:200px;">
+            <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
+        </div>
+        
+        <div class="autocomplete" style="width:200px;"> 
+            <input id="dest_input" type="text" name="destination" required="true" placeholder="Destination">
+        </div>
+        
+        Date : 
+        <input type="date" name="date"><br><br>
+        <input type="radio" name="trip" value="oneway" checked>One-way
+        <input type="radio" name="trip" value="return">Return<br><br>
+        No of Travellers : 
+        <input type="number" min=1 max=5 name="noofppl"><br><br>
+        Class :  
+        <select name="class">
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First Class</option>
+        </select><br><br>
+        <input type="submit" value="Book">
+        <input type="reset" value="Reset">
+            
+    </form>
+    </div>
+
+    </div>
+    
+
+
+
+
+    <script src="autoComplete.js"></script>
+</body>
