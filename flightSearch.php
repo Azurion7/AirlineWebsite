@@ -191,7 +191,7 @@
 		
 
         $sql = "SELECT fltno,etd,eta,duration,fare,fc_seats,b_seats,e_seats FROM Flights
-                WHERE source='$source' && destination='$destination' && $class_seats>='$count_travelers'";
+                WHERE source='$source' && destination='$destination' && ".$class_seats.">='$count_travelers'";
 
 
         $result = mysqli_query($conn,$sql);
