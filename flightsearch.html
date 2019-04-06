@@ -95,16 +95,18 @@
 			</div>
 			
 			<div class="form-group">
-				<label class="control-label" for="date">Date : </label>
-
+				<label class="control-label" for="date">Date:</label>
+				<br>
 					<input type="date" name="date" class="form-control">
 			</div>
 			<div class="form-group">
-				No of Travellers : 
+				<label class="control-label" for="noofppl">No of Travellers:</label>
+				<br>
 				<input type="number" min=1 max=5 name="noofppl" class="form-control">
 				</div>
 				<div class="form-group">
-				Class :  
+				<label class="control-label" for="date">Class:</label>
+				<br>
 				<select name="class">
 					<option value="economy">Economy</option>
 					<option value="business">Business</option>
@@ -133,13 +135,36 @@
 		</ul>
 		<br>
 		<ul class="fs-coldata">
-			<li>
-				<div id="etd">17:30</div>
-				<div id="eta">20:45</div>
-				<div id="flt-time">3 Hrs 15 Mins</div>
-				<div id="flt-class">First</div>
-				<div id="flt-fare">$1250</div>
-			</li>
+		<?php
+			$dbServername = "localhost";
+			$dbUsername = "root";
+			$dbPassword = "";
+			$dbName = "airline_master";
+
+
+			$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+			if($conn-> connect_error){
+					die("Connection failed:".$conn->connect_error);
+			}
+
+			$sql = "SELECT etd,eta,duration,fare FROM Flights";
+			$result = mysqli_query($conn,$sql);
+			$resultCheck = mysqli_num_rows($result);
+
+			if($resultCheck > 0){
+				while($row = mysqli_fetch_assoc($result)){
+					echo( 
+					"<li>
+					<div id='etd'>".$row['etd']."</div>
+					<div id='eta'>".$row['eta']."</div>
+					<div id='flt-time'>".$row['duration']."</div>
+					<div id='flt-class'>First</div>
+					<div id='flt-fare'>".$row['fare']."</div>
+					</li>"
+					);
+				}
+			}
+		?>
 		</ul>
 	</div>
 	<br>
