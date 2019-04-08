@@ -158,6 +158,7 @@
     </div>
 
     <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		displayFlight($conn,$_POST);
 	?>
     </div>
