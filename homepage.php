@@ -1,3 +1,5 @@
+<?php include('user.php');
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -67,8 +69,14 @@
             <a href="#">Member Priviliges </a>
 		</div>
 		</li>
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <?php if(isset($_SESSION['username'])):?>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span><?php echo $_SESSION['username'] ?></a></li>
+      <li><a href="homepage.php?logout='1'"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+		
+        <?php else : ?>
+        <li><a href="#" onClick="document.getElementById('registerForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+        <li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <?php endif ?>
     </ul>
  
 </div>
@@ -79,22 +87,31 @@
 <div class="container">
 <div id="loginForm" class="modal"> 
     
-  <form name="login" onsubmit="return validateForm()" class="modal-content animate" action="login.php" method="post"> 
- 
+  <form name="login" onsubmit="return validateForm()" class="modal-content animate" action="homepage.php" method="post"> 
       <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal" style="float: right;padding:20px;" >×</span> 
+       <p><center><h3>LOG-IN</h3></center><p>
           <div class="imgcontainer col-md-6" >
       <br>
       <img src="https://mnsearch.org/wp-content/uploads/2014/10/blank-2017.jpg" alt="Avatar" class="avatar" style="padding:20px;"> 
     </div> 
   <br>
     <div class="col-md-6"> 
+    <?php if(count($errors) >0): ?>
+			<div class="error">
+				<?php foreach ($errors as $error): ?>
+					<p><center><?php echo $error; ?></center></p>
+				<?php endforeach ?>
+			 </div><br>
+			 <script>document.getElementById('loginForm').style.display='block'</script>
+	<?php endif ?>
+
       <label><b>Username</b></label> 
-      <input type="text" placeholder="Enter Username" name="uname" id="uname"> 
+      <input type="text" placeholder="Enter Username" name="username" id="uname" required> 
   		<br>
       <label><b>Password</b></label> 
       <input type="password" placeholder="Enter Password" name="psw" id="psw"> 
         <br>
-      <button type="submit">Login</button> 
+      <button type="submit" name="login">Login</button> 
       <br>
       <input type="checkbox" checked="checked"> Remember me 
       <span class="psw"  style="background-color:#a5a5a5;padding-left:5px;padding-right:5px;"> <a href="#">Forgot password?</a></span> 
@@ -116,6 +133,66 @@ window.onclick = function(event) {
 </script> 
 </div>
 <!---->
+
+
+<!-----signup form ---->
+
+<div class="container">
+<div id="registerForm" class="modal"> 
+    
+  <form name="register" class="modal-content animate" action="homepage.php" method="post"> 
+ 
+      <span onclick="document.getElementById('registerForm').style.display='none'" class="close" title="Close Modal" style="float: right;padding:20px;" >×</span> 
+             <p><center><h3>Register</h3></center><p>
+          <div class="imgcontainer col-md-6" >
+      <br>
+      <img src="https://mnsearch.org/wp-content/uploads/2014/10/blank-2017.jpg" alt="Avatar" class="avatar" style="padding:20px;"> 
+    </div> 
+  <br>
+    <div class="col-md-6"> 
+    <?php if(count($errors) >0): ?>
+			<div class="error">
+				<?php foreach ($errors as $error): ?>
+					<p><center><?php echo $error; ?></center></p>
+				<?php endforeach ?>
+			 </div>
+			 <br>
+			 <script>document.getElementById('registerForm').style.display='block'</script>
+	<?php endif ?>
+
+      <label><b>Username : </b></label> 
+      <input type="text" placeholder="Enter Username" name="username" id="uname"> 
+  		<br><br>
+  		<label><b>Email : </b></label> 
+      <input type="email" placeholder="Enter email" name="email" id="email"> 
+  		<br><br>
+      <label><b>Password : </b></label> 
+      <input type="password" placeholder="Enter Password" name="psw" id="psw"> 
+        <br><br>
+        <label><b>Confirm Password : </b></label> 
+      <input type="password" placeholder="Enter Password Again" name="cpsw" id="psw"> 
+        <br><br>
+      <button type="submit" name="register">Sign Up</button>  <a href="#">Sign in instead?</a>
+      <br><br>
+    </div> 
+  
+    <div class="container">
+      
+    </div> 
+  </form> 
+</div> 
+<script> 
+  
+var modal = document.getElementById('registerForm'); 
+window.onclick = function(event) { 
+    if (event.target == modal) { 
+        modal.style.display = "none"; 
+    } 
+} 
+</script> 
+</div>
+
+<!-------->
 <div class="parent">
 <div class="col-md-12">
     <div id="myCarousel" class="carousel slide row" data-ride="carousel" data-interval="2500">
@@ -273,25 +350,34 @@ window.onclick = function(event) {
     <script src="formValidation.js"></script>
     <script src="autoComplete.js"></script>
     <script>
-	$(document).ready(function(){
-	  $("#div-finfo").mouseenter(function(){
-	    $("#form-finfo").fadeTo("slow", 1);
-	    //alert("You entered p1");
-	  });
-	  
-	  $("input").focus(function(){
-	    $(this).css("background-color", "#cccccc");
-	  });
-	  $("input").blur(function(){
-	    $(this).css("background-color", "#f1f1f1");
-	  });
-	  
-	  $(".close").click(function(){
-	    $(this).fadeIn("background-color", "#ffffff");
-	  });
+        $(document).ready(function(){
+            $("#div-finfo").mouseenter(function(){
+                $("#form-finfo").fadeTo("slow", 1);
+                //alert("You entered p1");
+            });
 
-	});
-	</script>
+            $("input").focus(function(){
+                $(this).css("background-color", "#cccccc");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "#f1f1f1");
+            });
+
+            $(".close").click(function(){
+                $(this).fadeIn("background-color", "#ffffff");
+            });
+
+        });
+    </script>
+    <?php
+    	if(isset($_SESSION['username'])) {
+		//header('location: login.php');
+		?>
+		<script>alert(<?php echo $_SESSION['username'] ?>);</script>
+		<?php 
+	}
+
+    ?>
 
 </body>
 </html>

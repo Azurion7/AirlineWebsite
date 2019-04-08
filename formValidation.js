@@ -1,5 +1,5 @@
 function validateForm() {
-  var x = document.forms["login"]["uname"].value;
+  var x = document.forms["login"]["username"].value;
   if (x == "") {
     alert("username must be filled out");
     return false;
@@ -8,20 +8,7 @@ function validateForm() {
   	alert("password empty!");
   	return false;
   }
-  passConfirm();
+  //passConfirm();
 } 
 
-function passConfirm() {
-	var txt;
-  var person = prompt("Please enter your password again:");
-  person.setAttribute("type","password");
-  var pass = document.forms["login"]["psw"].value;
-  if (person != pass || person == "") {
-    alert("Wrong password");
-    return false;
-  } else {
-    confirm("password confirmed");
-  }
-  document.getElementById("demo").innerHTML = txt;
 
-}
