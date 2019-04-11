@@ -62,10 +62,12 @@
 			$psw = md5($psw); //encrypt before comparing
 			$query = "SELECT * FROM users WHERE username='$username' AND password='$psw'";
 			$result = mysqli_query($db,$query);
+
 			if(mysqli_num_rows($result) == 1) {
 				//log user in
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are now logged in";
+				
 				header('location: index.php'); //redirect to homepage
 
 			}

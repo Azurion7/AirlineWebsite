@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 
+<?php include('user.php');
+?>
+
 <?php
     $dbServername = "localhost";
     $dbUsername = "root";
@@ -24,13 +27,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     
-    <script> 
-        /*$(document).ready(function(){
-          $(".dropdown").hover(function(){
-            $("dropbtn").slideToggle("slow");
-          });
-        });*/
-    </script>
     <script>
 		$(document).ready(function(){
 
@@ -38,7 +34,7 @@
 		});
     </script>
     <header>
-        <img src="https://dribbble.com/shots/2021168-Google-Flights">  The Airlines
+        <div style="background-image: url('http://diysolarpanelsv.com/images/plane-clipart-without-background-28.jpg'); width:10%;"></div>
     </header>
 
 </head>
@@ -58,7 +54,7 @@
                 <a href="#">Manage reservations</a>
                 <a href="#">Make other reservations</a>
             </div>
-		</div>
+        </div>
       </li>
       <li>
       <div class="dropdown">
@@ -68,8 +64,8 @@
                 <a href="#">Timetable</a>
                 <a href="#">Baggage Information</a>
             </div>
-		</div>
-	</li>
+        </div>
+    </li>
       <li>
       <div class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">DEALS</a>
@@ -77,10 +73,16 @@
             <a href="#">Airline specials</a>
             <a href="#">Destination Deals</a>
             <a href="#">Member Priviliges </a>
-		</div>
-		</li>
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </div>
+        </li>
+        <?php if(isset($_SESSION['username'])):?>
+      <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span><?php echo $_SESSION['username'] ?></a></li>
+      <li><a href="homepage.php?logout='1'"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        
+        <?php else : ?>
+        <li><a href="#" onClick="document.getElementById('registerForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+        <li><a href="#" onClick="document.getElementById('loginForm').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <?php endif ?>
     </ul>
  
 </div>

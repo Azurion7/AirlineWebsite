@@ -76,8 +76,12 @@ if(isset($_POST["login"])) {
         $query = "SELECT * FROM users WHERE username='$username' AND password='$psw'";
         $result = mysqli_query($db,$query);
         if(mysqli_num_rows($result) == 1) {
+            
+            // Fetch user tuple
+            $row = mysqli_fetch_assoc($result);
             //log user in
             $_SESSION['username'] = $username;
+            $_SESSION['points'] = $row['points'];
             $_SESSION['success'] = "You are now logged in";
             header('location: homepage.php'); //redirect to homepage
 

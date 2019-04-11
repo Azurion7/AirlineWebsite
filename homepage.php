@@ -70,7 +70,7 @@
 		</div>
 		</li>
         <?php if(isset($_SESSION['username'])):?>
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span><?php echo $_SESSION['username'] ?></a></li>
+      <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span><?php echo $_SESSION['username'] ?></a></li>
       <li><a href="homepage.php?logout='1'"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
 		
         <?php else : ?>
