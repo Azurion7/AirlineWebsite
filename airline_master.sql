@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2019 at 12:35 PM
+-- Generation Time: Apr 09, 2019 at 04:54 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -50,6 +50,30 @@ INSERT INTO `Flights` (`fltno`, `source`, `destination`, `etd`, `eta`, `duration
 ('161', 'mumbai', 'new york', '09:00:00', '01:00:00', '16:00:00', 0, 20, 210, 2000.50),
 ('299', 'mumbai', 'delhi', '09:00:00', '12:00:00', '03:00:00', 0, 0, 140, 500.00);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `points` int(50) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `points`) VALUES
+(1, 'test', NULL, 'testpass', 0),
+(2, 'tanvi', NULL, '7ad77b06fe9f1a33d6dabdd518fab8ed', 0),
+(3, 'tanishk', NULL, 'cd77144d5454e421111aea3764856f25', 0),
+(4, 'abcde', NULL, 'ab56b4d92b40713acc5af89985d4b786', 65);
+
 --
 -- Indexes for dumped tables
 --
@@ -59,6 +83,22 @@ INSERT INTO `Flights` (`fltno`, `source`, `destination`, `etd`, `eta`, `duration
 --
 ALTER TABLE `Flights`
   ADD PRIMARY KEY (`fltno`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

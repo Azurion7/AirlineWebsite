@@ -96,7 +96,7 @@
 	<div class="form-group" style="text-align:center;width:100%;">
         <div class="autocomplete" style="width:200px;">
             <label class="control-label" for="source">From</label>
-			<input id="src_input" type="text" name="source" placeholder="Source" class="form-control">
+			<input id="src_input" type="text" name="source" placeholder="Source" class="form-control" value=<?php echo $_POST['origin'] ?>>
         </div>
 	</div>
 	</div>
@@ -105,7 +105,7 @@
         <div class="form-group" style="text-align:center;width:100%;">
         <div class="autocomplete" style="width:200px;"> 
         <label class="control-label" for="dest">To</label>
-            <input id="dest_input" type="text" name="destination" placeholder="Destination" class="form-control">
+            <input id="dest_input" type="text" name="destination" placeholder="Destination" class="form-control" value=<?php echo $_POST['destination'] ?>>
         </div>
 		</div>
 	</div>
@@ -114,7 +114,7 @@
         <div class="form-group" style="text-align:center;width:100%;">
             <label class="control-label" for="date">Date</label>
             <br>
-			<input type="date" name="date" class="form-control">
+			<input type="date" name="date" class="form-control" value=<?php echo $_POST['date']?>>
 		</div>
 	</div>
 
@@ -122,7 +122,7 @@
 	<div class="form-group" style="text-align:center;width:100%;">
 		<label class="control-label" for="count_travelers">Travelers</label>
 		<br>
-		<input type="number" min=1 max=5 value=1 name="count_travelers" class="form-control">
+		<input type="number" min=1 max=5 value=1 name="count_travelers" class="form-control" value=<?php echo $_POST['noofppl'] ?>>
 	</div>
 	</div>
 	<div class="col-md-2">
@@ -176,9 +176,9 @@
 <?php
 	function displayFlight($conn,$input){
 		
-		$source = strtolower($input['source']);
+		$source = strtolower($input['origin']);
 		$destination = strtolower($input['destination']);
-        $count_travelers = $input['count_travelers'];
+        $count_travelers = $input['noofppl'];
         $class = $input['class'];
     
         switch($class){

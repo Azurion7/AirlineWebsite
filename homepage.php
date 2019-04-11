@@ -235,7 +235,7 @@ window.onclick = function(event) {
 <div class="tab-content">
   <div id="book-tab" class="tab-pane fade in active">
     <div id="div-finfo" style="display: none;">
-        <form autocomplete="off" id="form-finfo" name="bookTickets" action="#" method="POST" onsubmit="return validateForm()">
+        <form autocomplete="off" id="form-finfo" name="bookTickets" action="flightSearch.php" method="POST">
         <div class="autocomplete" style="width:200px;">
             From: <input id="src_input" type="text" name="origin" required="true" placeholder="Source">
         </div>
@@ -243,7 +243,7 @@ window.onclick = function(event) {
         <div class="autocomplete" style="width:200px;"> 
             To: <input id="dest_input" type="text" name="destination" required="true" placeholder="Destination">
         </div>
-        
+        <br><br>
             Date : 
             <input type="date" name="date"><br><br>
             <input type="radio" name="trip" value="oneway" checked>One-way
@@ -256,7 +256,7 @@ window.onclick = function(event) {
                 <option value="business">Business</option>
                 <option value="first">First Class</option>
             </select><br><br>
-            <input type="submit" value="Book">
+            <input type="submit" value="Book" name="bookflight">
             <input type="reset" value="Reset">
 
         </form>
@@ -373,7 +373,7 @@ window.onclick = function(event) {
     	if(isset($_SESSION['username'])) {
 		//header('location: login.php');
 		?>
-		<script>alert(<?php echo $_SESSION['username'] ?>);</script>
+		<script>alert("Hello <?php echo $_SESSION['username'] ?>!");</script>
 		<?php 
 	}
 
