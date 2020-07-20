@@ -8,10 +8,7 @@ Therefore, the idea behind our project is to understand and simulate the mechani
 * HTML
 * CSS
 * Javascript
-* Jquery
-* Bootstrap
 * pHp
-* Laravel
 
 ## Functionalities
 * User authentication with password encryption.
